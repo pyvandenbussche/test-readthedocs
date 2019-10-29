@@ -1,0 +1,756 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AQPython package &mdash; AnnotationQueryPython 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> AnnotationQueryPython
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">AQPython package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-AQPython.Annotation">AQPython.Annotation module</a></li>
+<li><a class="reference internal" href="#module-AQPython.Concordancers">AQPython.Concordancers module</a></li>
+<li><a class="reference internal" href="#module-AQPython.Query">AQPython.Query module</a></li>
+<li><a class="reference internal" href="#module-AQPython.Utilities">AQPython.Utilities module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">AnnotationQueryPython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../">Docs</a> &raquo;</li>
+        
+      <li>AQPython package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/autodoc/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-AQPython">
+<span id="aqpython-package"></span><h1>AQPython package<a class="headerlink" href="#module-AQPython" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-AQPython.Annotation">
+<span id="aqpython-annotation-module"></span><h2>AQPython.Annotation module<a class="headerlink" href="#module-AQPython.Annotation" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AQPython.Annotation.AQSchema">
+<code class="sig-prename descclassname">AQPython.Annotation.</code><code class="sig-name descname">AQSchema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Annotation.AQSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>AQAnnotation Schema.
+Document Id (such as PII)
+Annotation set (such as scnlp, ge)
+Annotation type (such as text, sentence)
+Starting offset for the annotation (based on the text file for the document)
+Ending offset for the annotation (based on the text file for the document)
+Annotation Id (after the annotations have been reordered)
+Contains any attributes such as exclude annotations, original annotation id, parent id, etc. Stored as a map.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Annotation.AQSchemaList">
+<code class="sig-prename descclassname">AQPython.Annotation.</code><code class="sig-name descname">AQSchemaList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Annotation.AQSchemaList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Schema used for Preceding and Following functions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Annotation.CATSchema">
+<code class="sig-prename descclassname">AQPython.Annotation.</code><code class="sig-name descname">CATSchema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Annotation.CATSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>CATAnnotation Schema.
+Document Id (such as PII)
+Annotation set (such as scnlp, ge)
+Annotation type (such as text, sentence)
+Starting offset for the annotation (based on the text file for the document)
+Ending offset for the annotation (based on the text file for the document)
+Annotation Id (after the annotations have been reordered)
+Other contains any attributes such as exclude annotations, original annotation id, parent id, etc. Stored as a name-value &amp; delimited string.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-AQPython.Concordancers">
+<span id="aqpython-concordancers-module"></span><h2>AQPython.Concordancers module<a class="headerlink" href="#module-AQPython.Concordancers" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AQPython.Concordancers.Concordancer">
+<code class="sig-prename descclassname">AQPython.Concordancers.</code><code class="sig-name descname">Concordancer</code><span class="sig-paren">(</span><em class="sig-param">results</em>, <em class="sig-param">textMnt</em>, <em class="sig-param">nrows=10</em>, <em class="sig-param">offset=0</em>, <em class="sig-param">highlightAnnotations=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Concordancers.Concordancer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output HTML for the text identified by the AQAnnotation and highlight in ‘red’ the text that was ignored (excluded).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>results</strong> – Dataframe of AQAnnotations that you would like to display.</p></li>
+<li><p><strong>textPath</strong> – Path for the str files.  The annotations in results must be for documents contained in these str files.</p></li>
+<li><p><strong>nrows</strong> – Number of results to display</p></li>
+<li><p><strong>offset</strong> – Number of characters before/after each annotation in results to display</p></li>
+<li><p><strong>highlightAnnotations</strong> – Dataframe of AQAnnotations that you would like to highlight in the results</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>HTML</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Concordancers.OrigPosLemConcordancer">
+<code class="sig-prename descclassname">AQPython.Concordancers.</code><code class="sig-name descname">OrigPosLemConcordancer</code><span class="sig-paren">(</span><em class="sig-param">sentences</em>, <em class="sig-param">annots</em>, <em class="sig-param">textMnt</em>, <em class="sig-param">wordType='word'</em>, <em class="sig-param">nrows=10</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Concordancers.OrigPosLemConcordancer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output HTML for the text (including lemma and pos tags) identified by the AQAnnotation (typically a sentence annotation).</p>
+<blockquote>
+<div><p>Below the sentence (in successive rows) output the original terms, parts of speech, and lemma terms for the text identified by the AQAnnotation.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentences</strong> – Sentence annotations that you would like to display.</p></li>
+<li><p><strong>annots</strong> – The Dataframe of AQAnnotations that will contain the the AQAnnotations (orig, lemma, pos) for the above sentences</p></li>
+<li><p><strong>textPath</strong> – Path for the str files.  The sentence annotations must be for documents contained in these str files.</p></li>
+<li><p><strong>wordType</strong> – The annotType that identies the AQAnnotation in the above annotations.</p></li>
+<li><p><strong>nrows</strong> – Number of sentences to display</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>HTML</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Concordancers.XMLConcordancer">
+<code class="sig-prename descclassname">AQPython.Concordancers.</code><code class="sig-name descname">XMLConcordancer</code><span class="sig-paren">(</span><em class="sig-param">results</em>, <em class="sig-param">textMnt</em>, <em class="sig-param">om</em>, <em class="sig-param">nrows=10</em>, <em class="sig-param">offset=0</em>, <em class="sig-param">highlightAnnotations=None</em>, <em class="sig-param">displayAttrs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Concordancers.XMLConcordancer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output HTML for the text identified by the AQannotation and highlight in ‘red’ the text that was ignored (excluded).</p>
+<blockquote>
+<div><p>Also add the XML tags (in ‘orange’) that would have occurred in this string.
+Note, there are no guarantees that the XML will be well-formed.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>results</strong> – Dataframe of AQAnnotations that you would like to display.</p></li>
+<li><p><strong>textPath</strong> – Path for the str files.  The annotations in results must be for documents contained in these str files.</p></li>
+<li><p><strong>om</strong> – Dataframe of AQAnnotations of the Original Markup annotations.  The annotations should be for the same documents contained in the results.</p></li>
+<li><p><strong>nrows</strong> – Number of results to display</p></li>
+<li><p><strong>offset</strong> – Number of characters before/after each annotation in results to display</p></li>
+<li><p><strong>highlightAnnotations</strong> – Dataframe of AQAnnotations that you would like to highlight in the results</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>HTML</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-AQPython.Query">
+<span id="aqpython-query-module"></span><h2>AQPython.Query module<a class="headerlink" href="#module-AQPython.Query" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AQPython.Query.After">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">After</code><span class="sig-paren">(</span><em class="sig-param">left</em>, <em class="sig-param">right</em>, <em class="sig-param">dist=9223372036854775807</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">negate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.After" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to find annotations that are after another annotation.</p>
+<blockquote>
+<div><p>The input is 2 Dataframes of AQAnnotations. We will call them A and B.
+The purpose is to find those annotations in A that are after B.
+What that means is the start offset for an annotation from A must be after (or equal to) the end offset from an annotation in B.
+We ultimately return the A annotations that meet this criteria.
+A distance operator can also be optionally specified.
+This would require an A annotation (startOffset) to occur n characters (or less) after the B annotation (endOffset).
+There is also the option of negating the query (think Not After) so that we return only A where it is not after B.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> – Dataframe of AQAnnotations, the ones we will return if they are after AQAnnotations from ‘right’.</p></li>
+<li><p><strong>right</strong> – Dataframe of AQAnnotations, the ones we are looking to see if are before AQAnnotations from ‘left’.</p></li>
+<li><p><strong>dist</strong> – Number of characters  where startOffset from ‘left’ must occur after endOffset from ‘right’. Default is sys.maxsize.</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+<li><p><strong>negate</strong> – Whether to negate the entire query (think NOT after).  Default is false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.And">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">And</code><span class="sig-paren">(</span><em class="sig-param">left</em>, <em class="sig-param">right</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">negate=False</em>, <em class="sig-param">leftOnly=True</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.And" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to find annotations that are in the same document.</p>
+<blockquote>
+<div><p>The input is 2 Dataframes of AQAnnotations. We will call them A and B.
+The purpose is to find those annotations in A and B that are in the same document.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> – Dataframe of AQAnnotations</p></li>
+<li><p><strong>right</strong> – Dataframe of AQAnnotations.</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+<li><p><strong>negate</strong> – think and NOT (only return annotations from A that are not in B).  Default is false.</p></li>
+<li><p><strong>leftOnly</strong> – Reuturn only the left or the left and right.  The default is to only return the left.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.Before">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">Before</code><span class="sig-paren">(</span><em class="sig-param">left</em>, <em class="sig-param">right</em>, <em class="sig-param">dist=9223372036854775807</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">negate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.Before" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to find annotations that are before another annotation.</p>
+<blockquote>
+<div><p>The input is 2 Dataframes of AQAnnotations. We will call them A and B.
+The purpose is to find those annotations in A that are before B.
+What that means is the end offset for an annotation from A must be before (or equal to) the start offset from an annotation in B.
+We ultimately return the A annotations that meet this criteria.
+A distance operator can also be optionally specified.
+This would require an A annotation (endOffset) to occur n characters (or less) before the B annotation (startOffset).
+There is also the option of negating the query (think Not Before) so that we return only A where it is not before B.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> – Dataframe of AQAnnotations, the ones we will return if they are before AQAnnotations from ‘right’.</p></li>
+<li><p><strong>right</strong> – Dataframe of AQAnnotations, the ones we are looking to see if are after AQAnnotations from ‘left’.</p></li>
+<li><p><strong>dist</strong> – Number of characters  where endOffset from ‘left’ must occur before startOffset from ‘right’. Default is sys.maxsize.</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+<li><p><strong>negate</strong> – Whether to negate the entire query (think NOT before).  Default is false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.Between">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">Between</code><span class="sig-paren">(</span><em class="sig-param">middle</em>, <em class="sig-param">left</em>, <em class="sig-param">right</em>, <em class="sig-param">dist=9223372036854775807</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">negate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.Between" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to find annotations that are before one annotation and after another.</p>
+<blockquote>
+<div><p>The input is 3 Dataframes of AQAnnotations. We will call them A, B and C.
+The purpose is to find those annotations in A that are before B and after C.
+What that means is the end offset for an annotation from A must be before (or equal to) the start offset from an annotation in B and the start offset for A be after (or equal to) the end offset from C.
+We ultimately return the A annotations that meet this criteria.
+A distance operator can also be optionally specified.
+This would require an A annotation (endOffset) to occur n characters (or less) before the B annotation (startOffset) and would require the A annotation (startOffset) to occur n characters (or less) after the C annotation (endOffset) .
+There is also the option of negating the query (think Not Between) so that we return only A where it is not before B nor after C.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>middle</strong> – Dataframe of AQAnnotations, the ones we will return if they are between AQAnnotations from ‘left’ and AQAnnotations from ‘right.</p></li>
+<li><p><strong>left</strong> – Dataframe of AQAnnotations, the ones we are looking to see if they are before AQAnnotations from ‘middle’.</p></li>
+<li><p><strong>right</strong> – Dataframe of AQAnnotations, the ones we are looking to see if they are after AQAnnotations from ‘middle’.</p></li>
+<li><p><strong>dist</strong> – Number of characters  where startOffset from ‘middle’ must occur after endOffset of ‘left’ or endOffset from ‘middle’ must occur before startOffset of ‘right’</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+<li><p><strong>negate</strong> – Whether to negate the entire query (think NOT between).  Default is false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.ContainedIn">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">ContainedIn</code><span class="sig-paren">(</span><em class="sig-param">left</em>, <em class="sig-param">right</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">negate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.ContainedIn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to find annotations that are contained by another annotation.</p>
+<blockquote>
+<div><p>The input is 2 Dataframes of AQAnnotations. We will call them A and B.
+The purpose is to find those annotations in A that are contained in B.
+What that means is the start/end offset for an annotation from A must be contained by the start/end offset from an annotation in B.
+The start/end offsets are inclusive.  We ultimately return the contained annotations (A) that meet this criteria.
+There is also the option of negating the query (think Not Contains) so that we return only A where it is not contained in B.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> – Dataframe of AQAnnotations, the ones we will return if they are contained in AQAnnotations from ‘right’.</p></li>
+<li><p><strong>right</strong> – Dataframe of AQAnnotations, the ones we are looking to see if they contain AQAnnotations from ‘left’.</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+<li><p><strong>negate</strong> – Whether to negate the entire query (think NOT contained in).  Default is false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.Contains">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">Contains</code><span class="sig-paren">(</span><em class="sig-param">left</em>, <em class="sig-param">right</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">negate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.Contains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to find annotations that contain another annotation.</p>
+<blockquote>
+<div><p>The input is 2 Dataframes of AQAnnotations. We will call them A and B.
+The purpose is to find those annotations in A that contain B. What that means is the start/end offset for an annotation from A must contain the start/end offset from an annotation in B.
+The start/end offsets are inclusive.  We ultimately return the container annotations (A) that meet this criteria.
+We also deduplicate the A annotations as there could be many annotations from B that could be contained by an annotation in A but it only makes sense to return the unique container annotations.
+There is also the option of negating the query (think Not Contains) so that we return only A where it does not contain B.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> – Dataframe of AQAnnotations, the ones we will return if they contain AQAnnotations from ‘right’.</p></li>
+<li><p><strong>right</strong> – Dataframe of AQAnnotations, the ones we are looking to see if they occur in the AQAnnotations from ‘left’.</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+<li><p><strong>negate</strong> – Whether to negate the entire query (think NOT contains).  Default is false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.FilterProperty">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">FilterProperty</code><span class="sig-paren">(</span><em class="sig-param">df</em>, <em class="sig-param">name</em>, <em class="sig-param">value=''</em>, <em class="sig-param">valueArr=[]</em>, <em class="sig-param">valueCompare='='</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">negate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.FilterProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to filter a Dataframe of AQAnnotations based on the value matching the specified property value in the map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – Dataframe of AQAnnotations that will be filtered by the specified property name and value.</p></li>
+<li><p><strong>name</strong> – Name of the property to filter.</p></li>
+<li><p><strong>value</strong> – Value of the named property to filter.</p></li>
+<li><p><strong>valueArr</strong> – The array of values of the named property  to filter. An OR will be applied to the Strings. Only used if value was not specified.</p></li>
+<li><p><strong>valueCompare</strong> – Comparison operator to use for the property filter. Default is ‘=’. Possible values are ‘=’ and ‘!=’ when valueArr specified. Possible values are ‘=’,’!=’,’&lt;’,’&lt;=’,’&gt;’, and ‘&gt;=’ otherwise.</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+<li><p><strong>negate</strong> – Whether to negate the entire query. Default is false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.FilterSet">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">FilterSet</code><span class="sig-paren">(</span><em class="sig-param">df</em>, <em class="sig-param">annotSet=''</em>, <em class="sig-param">annotSetArr=[]</em>, <em class="sig-param">annotSetCompare='='</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">negate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.FilterSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to filter a Dataframe of AQAnnotations based on the value in the annotSet field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – Dataframe of AQAnnotations that will be filtered by the specified annotation set.</p></li>
+<li><p><strong>annotSet</strong> – String to filter against the annotSet field in the dataset of AQAnnotations.</p></li>
+<li><p><strong>annotSetArr</strong> – Array of Strings to filter against the annotSet field in the dataframe of AQAnnotations. An OR will be applied to the Strings.  Only used if annotSet was not specified.</p></li>
+<li><p><strong>annotSetCompare</strong> – Comparison operator to use for the annotSet field in the dataframe of AQAnnotations.  Default is ‘=’.  Possible values are ‘=’ and ‘!=’.</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+<li><p><strong>negate</strong> – Whether to negate the entire query.  Default is false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.FilterType">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">FilterType</code><span class="sig-paren">(</span><em class="sig-param">df</em>, <em class="sig-param">annotType=''</em>, <em class="sig-param">annotTypeArr=[]</em>, <em class="sig-param">annotTypeCompare='='</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">negate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.FilterType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to filter a Dataframe of AQAnnotations based on the value in the annotType field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – Dataframe of AQAnnotations that will be filtered by the specified annotation type.</p></li>
+<li><p><strong>annotType</strong> – String to filter against the annotType field in the dataframe of AQAnnotations.</p></li>
+<li><p><strong>annotTypeArr</strong> – Array of Strings to filter against the annotType field in the dataframe of AQAnnotations. An OR will be applied to the Strings.  Only used if annotType was not specified.</p></li>
+<li><p><strong>annotTypeCompare</strong> – Comparison operator to use for the annotType field in the dataframe of AQAnnotations.  Default is ‘=’.  Possible values are ‘=’ and ‘!=’.</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+<li><p><strong>negate</strong> – Whether to negate the entire query.  Default is false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.Following">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">Following</code><span class="sig-paren">(</span><em class="sig-param">annot</em>, <em class="sig-param">anchor</em>, <em class="sig-param">container=None</em>, <em class="sig-param">cnt=3</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.Following" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to find the following sibling annotations for every annotation in the anchor Dataframe of AQAnnotations.</p>
+<blockquote>
+<div><p>The following sibling annotations can optionally be required to be contained in a container Dataframe of AQAnnotations.
+The return type of this function is different from other functions.
+Instead of returning a Dataframe of AQAnnotations this function returns a Dataframe (AQAnnotation,Array[AQAnnotation]).</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annot</strong> – Dataframe of AQAnnotations, the ones we will be using to look for following sibling annotations.</p></li>
+<li><p><strong>anchor</strong> – Dataframe of AQAnnotations  starting point for using to look for following sibling annotations (use the endOffset and docId).</p></li>
+<li><p><strong>container</strong> – Dataframe of AQAnnotations to use when requiring the following sibling annotations to be contained in a specific annotation.</p></li>
+<li><p><strong>cnt</strong> – Number of preceding sibling AQAnnotations to return.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of (AQAnnotation,Array[AQAnnotation])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.MatchProperty">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">MatchProperty</code><span class="sig-paren">(</span><em class="sig-param">left</em>, <em class="sig-param">right</em>, <em class="sig-param">name</em>, <em class="sig-param">negate=False</em>, <em class="sig-param">limit=0</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.MatchProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to find annotations (looking at their property) that are in the same document.</p>
+<blockquote>
+<div><p>The input is 2 Dataframes of AQAnnotations. We will call them A and B.
+The purpose is to find those annotations in A that are in the same document as B and also match values on the specified property.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> – Dataframe of AQAnnotations, the ones we will return if they match AQAnnotations from ‘right’.</p></li>
+<li><p><strong>right</strong> – Dataframe of AQAnnotations the ones we are looking to see if they match AQAnnotations from ‘left’.</p></li>
+<li><p><strong>name</strong> – Name of the property to match.</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+<li><p><strong>negate</strong> – Whether to negate the entire query (think NOT contains).  Default is false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.Or">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">Or</code><span class="sig-paren">(</span><em class="sig-param">left</em>, <em class="sig-param">right</em>, <em class="sig-param">limit=0</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.Or" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to combine (union) Dataframes of AQAnnotations.</p>
+<blockquote>
+<div><p>The input is 2 Dataframes of AQAnnotations. The output is the union of these annotations.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> – Dataframe of AQAnnotations</p></li>
+<li><p><strong>right</strong> – Dataframe of AQAnnotations</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.Preceding">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">Preceding</code><span class="sig-paren">(</span><em class="sig-param">annot</em>, <em class="sig-param">anchor</em>, <em class="sig-param">container=None</em>, <em class="sig-param">cnt=3</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.Preceding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to find the preceding sibling annotations for every annotation in the anchor Dataframe of AQAnnotations.</p>
+<blockquote>
+<div><p>The preceding sibling annotations can optionally be required to be contained in a container Dataframe of AQAnnotations.
+The return type of this function is different from other functions.
+Instead of returning a Dataframe of AQAnnotations this function returns a Dataframe of (AQAnnotation,Array[AQAnnotation]).</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annot</strong> – Dataframe of AQAnnotations, the ones we will be using to look for preceding sibling annotations.</p></li>
+<li><p><strong>anchor</strong> – Dataframe of AQAnnotations  starting point for using to look for preceding sibling annotations (use the startOffset and docId).</p></li>
+<li><p><strong>container</strong> – Dataframe of AQAnnotations to use when requiring the preceding sibling annotations to be contained in a specific annotation.</p></li>
+<li><p><strong>cnt</strong> – Number of preceding sibling AQAnnotations to return.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of (AQAnnotation,Array[AQAnnotation])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.RegexProperty">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">RegexProperty</code><span class="sig-paren">(</span><em class="sig-param">df</em>, <em class="sig-param">name</em>, <em class="sig-param">regex</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">negate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.RegexProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to filter a Dataframe of AQAnnotations based on the regex applied to the specified property value in the map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – Dataframe of AQAnnotations that will be filtered by the specified property name and regex expression.</p></li>
+<li><p><strong>name</strong> – Name of the property to filter.</p></li>
+<li><p><strong>regex</strong> – Regex expression to use for the filter.</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+<li><p><strong>negate</strong> – Whether to negate the entire query. Default is false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Query.Sequence">
+<code class="sig-prename descclassname">AQPython.Query.</code><code class="sig-name descname">Sequence</code><span class="sig-paren">(</span><em class="sig-param">left</em>, <em class="sig-param">right</em>, <em class="sig-param">dist=9223372036854775807</em>, <em class="sig-param">limit=0</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Query.Sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the ability to find annotations that are before another annotation.</p>
+<blockquote>
+<div><p>The input is 2 Dataframes of AQAnnotations. We will call them A and B.
+The purpose is to find those annotations in A that are before B.
+What that means is the end offset for an annotation from A must be before (or equal to) the start offset from an annotation in B.
+We ultimately return the annotations that meet this criteria.
+Unlike the Before function, we adjust the returned annotation a bit.
+For example, we set the annotType to “seq” and we use the A startOffset and the B endOffset.
+A distance operator can also be optionally specified. This would require an A annotation (endOffset) to occur n characters (or less) before the B annotation (startOffset).</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> – Dataframe of AQAnnotations, the ones we will return if they are before AQAnnotations from ‘right’.</p></li>
+<li><p><strong>right</strong> – Dataframe of AQAnnotations, the ones we are looking to see if are after AQAnnotations from ‘left’.</p></li>
+<li><p><strong>dist</strong> – Number of characters  where endOffset from ‘left’ must occur before startOffset from ‘right’. Default is sys.maxsize.</p></li>
+<li><p><strong>limit</strong> – Number of AQAnnotations to return.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-AQPython.Utilities">
+<span id="aqpython-utilities-module"></span><h2>AQPython.Utilities module<a class="headerlink" href="#module-AQPython.Utilities" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="AQPython.Utilities.GetAQAnnotations">
+<code class="sig-prename descclassname">AQPython.Utilities.</code><code class="sig-name descname">GetAQAnnotations</code><span class="sig-paren">(</span><em class="sig-param">df</em>, <em class="sig-param">props=[]</em>, <em class="sig-param">lcProps=[]</em>, <em class="sig-param">decodeProps=[]</em>, <em class="sig-param">numPartitions=200</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Utilities.GetAQAnnotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function converts a Dataframe of CATAnnotations to a Dataframe of AQAnnotations.</p>
+<blockquote>
+<div><p>A bare-bones AQAnnotation (with no properties) can be generated by only passing a Dataframe of CATAnnotations.
+If properties (name-value pairs from the CATAnnotation other column) are desired, you have the option of specifying an Array of names (from these name-value pairs).
+Additionally, you have the option of specifying if the values for these properties should be lower-cased and/or url decoded.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>catAnnots</strong> – Dataframe of CATAnnotations</p></li>
+<li><p><strong>props</strong> – Array of property names  (from the name-value pairs in the other column in CATAnnotation) that you would like populated in the AQAnnotation Map of properties.</p></li>
+<li><p><strong>lcProps</strong> – Array of property names where the value should be lower cased when populating the AQAnnotation Map of properties.</p></li>
+<li><p><strong>decodeProps</strong> – Array of property names where the value should be url decoded when populating the AQAnnotation Map of properties.</p></li>
+<li><p><strong>numPartitions</strong> – Number of partitions for the Dataframe of AQAnnotations.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Utilities.GetCATAnnotations">
+<code class="sig-prename descclassname">AQPython.Utilities.</code><code class="sig-name descname">GetCATAnnotations</code><span class="sig-paren">(</span><em class="sig-param">df</em>, <em class="sig-param">props=[]</em>, <em class="sig-param">encodeProps=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Utilities.GetCATAnnotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function converts a Dataframe of AQAnnotations to a Dataframe of CATAnnotations.</p>
+<blockquote>
+<div><p>If specific properties (name-value pairs to set in the CATAnnotation other column) are desired, you have the option of specifying an Array of names (for these name-value pairs).
+Additionally, you have the option of specifying if the values for these name-value pairs that  should be url encoded.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>aqAnnotations</strong> – Dataframe of AQAnnotations to convert to Dataframe of CATAnnotations</p></li>
+<li><p><strong>props</strong> – Array of property names  to make name-value pairs in the other column of CATAnnotation.</p></li>
+<li><p><strong>encodeProps</strong> – Array of property names  to url encode the value when making name-value pairs in the other column of CATAnnotation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of CATAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="AQPython.Utilities.Hydrate">
+<code class="sig-prename descclassname">AQPython.Utilities.</code><code class="sig-name descname">Hydrate</code><span class="sig-paren">(</span><em class="sig-param">df</em>, <em class="sig-param">txtPath</em>, <em class="sig-param">excludes=True</em><span class="sig-paren">)</span><a class="headerlink" href="#AQPython.Utilities.Hydrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function will retrieve the text for each AQAnnotation in the passed Dataframe of AQAnnotations, populate the text property with this value in the AQAnnotation, and return a Dataframe of AQAnnotations with the text property populated.</p>
+<blockquote>
+<div><p>Keep in mind that for ‘text/word’ annotations the orig column will already be populated with the ‘original’ text value so this may not be needed.
+However, if you are working with sentence annotations (and other similar annotations) this could prove to be very helpful.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – The Dataframe of Annotations that we want to populate the text property with the text for this annotation</p></li>
+<li><p><strong>textPath</strong> – Path the str files.  The str files for the documents in the ds annotations must be found here.</p></li>
+<li><p><strong>excludes</strong> – Whether we want to include the ‘excludes’ text.  True means exclude the excluded text.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of AQAnnotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Elsevier Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
